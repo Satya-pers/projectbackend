@@ -40,7 +40,7 @@ mongoose.connect(
 .then(() => console.log("MongoDB connected"))
 .catch((err) => console.log(err));
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 
 cron.schedule('* * * * *', async () => {
