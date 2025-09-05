@@ -18,14 +18,14 @@ function getISTTimeString() {
 }
 
 
-router.get("/", async (req, res) => {
-  try {
-    const tasks = await ListS.find();
-    res.json(tasks);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+// router.get("/", async (req, res) => {
+//   try {
+//     const tasks = await ListS.find();
+//     res.json(tasks);
+//   } catch (err) {
+//     res.status(500).json({ error: err.message });
+//   }
+// });
 
 router.post('/create-task', async (req, res) => {
   try {

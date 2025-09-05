@@ -30,7 +30,9 @@ function getISTTimeString() {
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 mongoose.set("strictQuery", true);
 
 mongoose.connect(
